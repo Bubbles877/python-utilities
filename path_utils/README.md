@@ -32,7 +32,9 @@ setting_file_path = path_utils.runtime_path("data/setting.txt")
 
 ## 5. 対応環境
 
-[pyproject.toml](../pyproject.toml) を参照してください。
+以下のバージョンで動作を確認しています。
+
+- Python 3.12.10
 
 ## 6. リポジトリ
 
