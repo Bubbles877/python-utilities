@@ -8,7 +8,8 @@
 
 ## 2. ユーティリティ
 
-- TODO: llm_chat
+- [llm_chat - LLM チャット](llm_chat/)
+  - LLM とのチャットを管理
 - [path_utils - パスユーティリティ](path_utils/)
   - ファイルパスのユーティリティ
 
