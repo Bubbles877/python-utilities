@@ -23,7 +23,7 @@ LLM とのチャットを管理します。
 ```python
 from typing import Optional
 
-from langchain_core.messages import AnyMessage
+from langchain_core.messages import AIMessage, AnyMessage, HumanMessage
 from langchain_openai import ChatOpenAI
 from pydantic import SecretStr
 
@@ -41,6 +41,8 @@ llm_chat.configure("You are a helpful assistant.")
 
 message = "What is the capital of Japan?"
 history: list[AnyMessage] = []  # 必要に応じて会話履歴を設定する
+history.append(HumanMessage(content="What is the capital of France?"))
+history.append(AIMessage(content="The capital of France is Paris."))
 
 res = llm_chat.invoke(message, history)
 print(res)  # e.g. The capital of Japan is Tokyo.
