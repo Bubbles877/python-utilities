@@ -44,8 +44,8 @@ history: list[AnyMessage] = []  # 必要に応じて会話履歴を設定する
 history.append(HumanMessage(content="What is the capital of France?"))
 history.append(AIMessage(content="The capital of France is Paris."))
 
-res = llm_chat.invoke(message, history)
-print(res)  # e.g. The capital of Japan is Tokyo.
+response = llm_chat.invoke(message, history)
+print(response)  # e.g. The capital of Japan is Tokyo.
 ```
 
 ## 5. 対応環境
