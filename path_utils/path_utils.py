@@ -9,7 +9,7 @@ def runtime_path(relative_path: str) -> Optional[str]:
 
     以下の順番で探索を試行します。
     1. プロジェクトのルートディレクトリ基準
-    2. EXE ファイル実行時の内部のルートディレクトリ基準
+    2. EXE ファイル実行時の EXE 内部のルートディレクトリ基準
     3. カレントワーキングディレクトリ基準
 
     .env ファイルのパスの取得にも利用できます。
@@ -54,7 +54,7 @@ def project_root() -> str:
 
 @lru_cache(maxsize=1)
 def exe_internal_root() -> Optional[str]:
-    """EXE ファイル実行時の内部のルートディレクトリの絶対パスを取得する
+    """EXE ファイル実行時の EXE 内部のルートディレクトリの絶対パスを取得する
 
     Returns:
         Optional[str]: 絶対パス
