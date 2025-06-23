@@ -9,7 +9,8 @@
 ## 2. ユーティリティ
 
 - TODO: llm_chat
-- TODO: path_utils
+- [path_utils - パスユーティリティ](path_utils/)
+  - ファイルパスのユーティリティ
 
 ## 3. リポジトリ
 
