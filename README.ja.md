@@ -12,6 +12,8 @@
   - LLM とのチャットを管理
 - [path_utils - パスユーティリティ](path_utils/)
   - ファイルパスのユーティリティ
+- [env_settings - 環境変数設定](env_settings/)
+  - `pydantic-settings` を利用した環境変数設定クラスのコレクション
 
 ## 3. リポジトリ
 
