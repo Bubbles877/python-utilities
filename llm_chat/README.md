@@ -10,11 +10,11 @@ LLM とのチャットを管理します。
 - LLM に渡す会話履歴の最大数の設定
 - LLM の呼び出し (同期/非同期)
 
-## 3. 組み込み
+## 3. インストール
 
-以下を util/ などにインポートしてください。
+以下を `util/` などに配置してください。
 
-- [llm_chat - LLM チャット](llm_chat.py)
+- [llm_chat - LLM チャット](./llm_chat.py)
 
 ## 4. 使い方
 
@@ -48,7 +48,7 @@ response = llm_chat.invoke(message, history)
 print(response)  # e.g. The capital of Japan is Tokyo.
 ```
 
-## 5. 依存関係 & 動作を確認したバージョン
+## 5. 依存関係 & 動作確認済みバージョン
 
 - Python 3.12.10
 - langchain 0.3.25

@@ -11,11 +11,11 @@
 - プロジェクトのルートディレクトリの絶対パスを取得
 - EXE ファイル実行時の EXE 内部のルートディレクトリの絶対パスを取得
 
-## 3. 組み込み
+## 3. インストール
 
-以下を util/ などにインポートしてください。
+以下を `util/` などに配置してください。
 
-- [path_utils - パスユーティリティ](path_utils.py)
+- [path_utils - パスユーティリティ](./path_utils.py)
 
 ## 4. 使い方
 
@@ -28,7 +28,7 @@ env_file_path = path_utils.runtime_path(".env")
 setting_file_path = path_utils.runtime_path("data/setting.txt")
 ```
 
-## 5. 依存関係 & 動作を確認したバージョン
+## 5. 依存関係 & 動作確認済みバージョン
 
 - Python 3.12.10
 
