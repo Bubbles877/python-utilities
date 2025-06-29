@@ -1,26 +1,26 @@
-﻿# llm_chat - LLM チャット
+﻿# llm_chat - LLM Chat
 
 [日本語 Readme](./README.ja.md)
 
 ## 1. Overview
 
-LLM とのチャットを管理します。
+Manage chats with LLM.
 
 ## 2. Key Features
 
-- システムプロンプトの設定・更新
-- Feature for setting the maximum number of conversation history entries to pass to the LLM
-- LLM の呼び出し (同期/非同期)
+- Set and update system prompts
+- Set the maximum number of conversation-history entries to pass to the LLM
+- Call the LLM (synchronous / asynchronous)
 
-## 3. インストール
+## 3. Installation
 
-以下を `util/` などに配置してください。
+Place the following file under `util/` (or your preferred package directory):
 
-- [llm_chat - LLM チャット](./llm_chat.py)
+- [llm_chat - LLM Chat](./llm_chat.py)
 
 ## 4. Usage
 
-以下の例のように呼び出します。
+Call as in the example below.
 
 ```python
 from typing import Optional
@@ -35,14 +35,14 @@ from util.llm_chat import LLMChat
 llm = ChatOpenAI(
     model="gpt-4.1-mini",
     base_url="https://api.openai.com/",
-    api_key=SecretStr("***")
+    api_key=SecretStr("***"),
     temperature=0.8,
 )
 llm_chat = LLMChat(llm, max_messages=-1)
 llm_chat.configure("You are a helpful assistant.")
 
 message = "What is the capital of Japan?"
-history: list[AnyMessage] = []  # 必要に応じて会話履歴を設定する
+history: list[AnyMessage] = []  # Set conversation history if necessary
 history.append(HumanMessage(content="What is the capital of France?"))
 history.append(AIMessage(content="The capital of France is Paris."))
 
@@ -50,7 +50,7 @@ response = llm_chat.invoke(message, history)
 print(response)  # e.g. The capital of Japan is Tokyo.
 ```
 
-## 5. Dependencies & 動作確認済みバージョン
+## 5. Dependencies & Verified Versions
 
 - Python 3.12.10
 - langchain 0.3.25

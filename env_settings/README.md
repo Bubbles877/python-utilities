@@ -1,33 +1,33 @@
-﻿# env_settings - 環境変数設定
+﻿# env_settings - Environment Variable Settings
 
 [日本語 Readme](./README.ja.md)
 
 ## 1. Overview
 
-`pydantic-settings` を利用した環境変数設定クラスのコレクションです。
+Collection of environment-variable settings classes using `pydantic-settings`.
 
 ## 2. Key Features
 
-クラスをインスタンス化するだけで、環境変数から設定を読み込めます。
+Simply instantiating a class loads values from environment variables.
 
-以下、定義したものがあります。
+The following settings classes are provided:
 
-- LLM 設定
-- Slack 設定
+- LLM settings
+- Slack settings
 
-## 3. インストール
+## 3. Installation
 
-以下を `util/setting/` などに配置してください。
+Place the following files under `util/` (or your preferred package directory):
 
-- [llm_settings - LLM 設定](./llm_settings.py)
-- [slack_settings - Slack 設定](./slack_settings.py)
+- [llm_settings - LLM settings](./llm_settings.py)
+- [slack_settings - Slack settings](./slack_settings.py)
 
 ## 4. Usage
 
-1. Set up environment variables
-2. プログラムから呼び出す
+1. Set up the required environment variables
+2. Call the classes from your code
 
-### 4.1. 環境変数の設定
+### 4.1. Setting environment variables
 
 Environment variables are required.
 
@@ -36,24 +36,24 @@ Create a `.env` file at the project root in your local environment and set the e
 
 Available environment variables:
 
-#### LLM 設定
+#### LLM settings
 
 - LLM_PROVIDER
   - LLM provider (e.g. `azure`, `ollama`, `openai`)
 - LLM_NAME
-  - LLM 名 (e.g. Azure: gpt-4.1-mini, Ollama: qwen2.5:32b, gemma3:12b)
+  - LLM model name (e.g. Azure: gpt-4.1-mini, Ollama: qwen2.5:32b, gemma3:12b)
 - LLM_DEPLOY_NAME
   - LLM deployment name (e.g. Azure: gpt-4.1-mini-dev-001)
 - LLM_ENDPOINT
-  - LLM API の URL (e.g. Azure: `https://oai-foo-dev.openai.azure.com/`, Ollama: `http://localhost:11434/`, OpenAI: `https://api.openai.com/`)
+  - URL of the LLM API (e.g. Azure: `https://oai-foo-dev.openai.azure.com/`, Ollama: `http://localhost:11434/`, OpenAI: `https://api.openai.com/`)
 - LLM_API_KEY
   - LLM API key
 - LLM_API_VER
   - LLM API version (e.g. Azure: 2025-01-01-preview)
 - LLM_TEMPERATURE
-  - LLM の出力の多様性 (0.0-1.0)
+  - Diversity of LLM Outputs (0.0–1.0)
 
-#### Slack 設定
+#### Slack settings
 
 - SLACK_IS_SOCKET_MODE
   - Whether to run in socket mode (`True`, `False`)
@@ -68,24 +68,24 @@ Available environment variables:
 - SLACK_MAX_THREAD_MESSAGES
   - Maximum number of messages to retrieve within a thread
 
-### 4.2. プログラムからの呼び出し
+### 4.2. Calling from code
 
-以下の例のように呼び出します。  
-※`util/setting/` に配置している場合
+Call as in the example below.  
+**Note:** If placed in `util/setting/`
 
 ```python
 from util.setting.llm_settings import LLMSettings
 from util.setting.slack_settings import SlackSettings
 
 llm_settings = LLMSettings()
-# クラス内で指定しているファイルと変えたい場合は _env_file で指定する
+# If you want to change the file specified in the class, specify it with _env_file
 slack_settings = SlackSettings(_env_file="test/.env")
 
 print(f"LLM settings:\n{llm_settings.model_dump_json(indent=2)}")
 print(f"Slack settings:\n{slack_settings.model_dump_json(indent=2)}")
 ```
 
-## 5. Dependencies & 動作確認済みバージョン
+## 5. Dependencies & Verified Versions
 
 - Python 3.12.10
 - pydantic-settings 2.9.1
