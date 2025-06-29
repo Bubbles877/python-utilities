@@ -35,7 +35,7 @@ from util.llm_chat import LLMChat
 llm = ChatOpenAI(
     model="gpt-4.1-mini",
     base_url="https://api.openai.com/",
-    api_key=SecretStr("***")
+    api_key=SecretStr("***"),
     temperature=0.8,
 )
 llm_chat = LLMChat(llm, max_messages=-1)

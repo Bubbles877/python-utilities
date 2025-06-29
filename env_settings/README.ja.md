@@ -41,7 +41,7 @@
 - LLM_PROVIDER
   - LLM プロバイダ (e.g. `azure`, `ollama`, `openai`)
 - LLM_NAME
-  - LLM 名 (e.g. Azure: gpt-4.1-mini, Ollama: qwen2.5:32b, gemma3:12b)
+  - LLM のモデル名 (e.g. Azure: gpt-4.1-mini, Ollama: qwen2.5:32b, gemma3:12b)
 - LLM_DEPLOY_NAME
   - LLM デプロイ名 (e.g. Azure: gpt-4.1-mini-dev-001)
 - LLM_ENDPOINT
