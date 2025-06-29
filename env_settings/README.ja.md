@@ -1,12 +1,12 @@
 ﻿# env_settings - 環境変数設定
 
-[日本語 Readme](./README.ja.md)
+[English Readme](./README.md)
 
-## 1. Overview
+## 1. 概要
 
 `pydantic-settings` を利用した環境変数設定クラスのコレクションです。
 
-## 2. Key Features
+## 2. 主な機能
 
 クラスをインスタンス化するだけで、環境変数から設定を読み込めます。
 
@@ -22,51 +22,51 @@
 - [llm_settings - LLM 設定](./llm_settings.py)
 - [slack_settings - Slack 設定](./slack_settings.py)
 
-## 4. Usage
+## 4. 使い方
 
-1. Set up environment variables
+1. 環境変数を設定する
 2. プログラムから呼び出す
 
 ### 4.1. 環境変数の設定
 
-Environment variables are required.
+環境変数の設定が必要です。
 
-Create a `.env` file at the project root in your local environment and set the environment variables.  
-[.env.example](./.env.example) is the template.
+ローカル環境ではプロジェクトのルートに `.env` を作成して環境変数を設定してください。  
+[.env.example](./.env.example) がテンプレートです。
 
-Available environment variables:
+以下の環境変数があります。
 
 #### LLM 設定
 
 - LLM_PROVIDER
-  - LLM provider (e.g. `azure`, `ollama`, `openai`)
+  - LLM プロバイダ (e.g. `azure`, `ollama`, `openai`)
 - LLM_NAME
   - LLM 名 (e.g. Azure: gpt-4.1-mini, Ollama: qwen2.5:32b, gemma3:12b)
 - LLM_DEPLOY_NAME
-  - LLM deployment name (e.g. Azure: gpt-4.1-mini-dev-001)
+  - LLM デプロイ名 (e.g. Azure: gpt-4.1-mini-dev-001)
 - LLM_ENDPOINT
   - LLM API の URL (e.g. Azure: `https://oai-foo-dev.openai.azure.com/`, Ollama: `http://localhost:11434/`, OpenAI: `https://api.openai.com/`)
 - LLM_API_KEY
-  - LLM API key
+  - LLM API のキー
 - LLM_API_VER
-  - LLM API version (e.g. Azure: 2025-01-01-preview)
+  - LLM API のバージョン (e.g. Azure: 2025-01-01-preview)
 - LLM_TEMPERATURE
   - LLM の出力の多様性 (0.0-1.0)
 
 #### Slack 設定
 
 - SLACK_IS_SOCKET_MODE
-  - Whether to run in socket mode (`True`, `False`)
-  - For local development purposes
+  - ソケットモードで実行するかどうか (`True`, `False`)
+  - ローカルでの開発用途
 - SLACK_APP_TOKEN
-  - App-level token
-  - Required for socket mode
+  - アプリレベルトークン
+  - ソケットモードで必要
 - SLACK_BOT_TOKEN
-  - Bot token
+  - ボットトークン
 - SLACK_SIGNING_SECRET
-  - Signing secret
+  - 署名シークレット
 - SLACK_MAX_THREAD_MESSAGES
-  - Maximum number of messages to retrieve within a thread
+  - スレッド内の取得するメッセージの最大数
 
 ### 4.2. プログラムからの呼び出し
 
@@ -85,11 +85,11 @@ print(f"LLM settings:\n{llm_settings.model_dump_json(indent=2)}")
 print(f"Slack settings:\n{slack_settings.model_dump_json(indent=2)}")
 ```
 
-## 5. Dependencies & 動作確認済みバージョン
+## 5. 依存関係 & 動作確認済みバージョン
 
 - Python 3.12.10
 - pydantic-settings 2.9.1
 
-## 6. Repository
+## 6. リポジトリ
 
 - [Bubbles877/python-utilities](https://github.com/Bubbles877/python-utilities)

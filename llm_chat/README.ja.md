@@ -1,15 +1,15 @@
 ﻿# llm_chat - LLM チャット
 
-[日本語 Readme](./README.ja.md)
+[English Readme](./README.md)
 
-## 1. Overview
+## 1. 概要
 
 LLM とのチャットを管理します。
 
-## 2. Key Features
+## 2. 主な機能
 
 - システムプロンプトの設定・更新
-- Feature for setting the maximum number of conversation history entries to pass to the LLM
+- LLM に渡す会話履歴の最大数の設定
 - LLM の呼び出し (同期/非同期)
 
 ## 3. インストール
@@ -18,7 +18,7 @@ LLM とのチャットを管理します。
 
 - [llm_chat - LLM チャット](./llm_chat.py)
 
-## 4. Usage
+## 4. 使い方
 
 以下の例のように呼び出します。
 
@@ -50,13 +50,13 @@ response = llm_chat.invoke(message, history)
 print(response)  # e.g. The capital of Japan is Tokyo.
 ```
 
-## 5. Dependencies & 動作確認済みバージョン
+## 5. 依存関係 & 動作確認済みバージョン
 
 - Python 3.12.10
 - langchain 0.3.25
 - langchain-core 0.3.59
 - loguru 0.7.3
 
-## 6. Repository
+## 6. リポジトリ
 
 - [Bubbles877/python-utilities](https://github.com/Bubbles877/python-utilities)
