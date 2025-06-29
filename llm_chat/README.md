@@ -48,11 +48,12 @@ response = llm_chat.invoke(message, history)
 print(response)  # e.g. The capital of Japan is Tokyo.
 ```
 
-## 5. 対応環境
-
-以下のバージョンで動作を確認しています。
+## 5. 依存関係 & 動作を確認したバージョン
 
 - Python 3.12.10
+- langchain 0.3.25
+- langchain-core 0.3.59
+- loguru 0.7.3
 
 ## 6. リポジトリ
 
