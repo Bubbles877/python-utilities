@@ -1,25 +1,27 @@
-﻿# path_utils - パスユーティリティ
+﻿# path_utils - Path Utilities
 
-## 1. 概要
+[日本語 Readme](./README.ja.md)
 
-ファイルパスのユーティリティです。
+## 1. Overview
 
-## 2. 主な機能
+Utility functions for file paths.
 
-- プロジェクトのルートディレクトリからの相対パスを指定して、実行時の状況に合わせた絶対パスを取得
-  - Python スクリプトでの実行と EXE ファイルでの実行による違いや、カレントディレクトリの差異などを吸収
-- プロジェクトのルートディレクトリの絶対パスを取得
-- EXE ファイル実行時の EXE 内部のルートディレクトリの絶対パスを取得
+## 2. Key Features
 
-## 3. インストール
+- Obtain an absolute path from a project-root-relative path
+  - Absorbing differences such as running a Python script vs an EXE file, and variations in the current working directory
+- Retrieve the absolute path of the project root directory
+- Retrieve the absolute path of the internal root directory when running as an EXE file
 
-以下を `util/` などに配置してください。
+## 3. Installation
 
-- [path_utils - パスユーティリティ](./path_utils.py)
+Place the following file under `util/` (or your preferred package directory):
 
-## 4. 使い方
+- [path_utils - Path Utilities](./path_utils.py)
 
-以下の例のように呼び出します。
+## 4. Usage
+
+Call as in the example below.
 
 ```python
 import util.path_utils as path_utils
@@ -28,10 +30,10 @@ env_file_path = path_utils.runtime_path(".env")
 setting_file_path = path_utils.runtime_path("data/setting.txt")
 ```
 
-## 5. 依存関係 & 動作確認済みバージョン
+## 5. Dependencies & Verified Versions
 
 - Python 3.12.10
 
-## 6. リポジトリ
+## 6. Repository
 
 - [Bubbles877/python-utilities](https://github.com/Bubbles877/python-utilities)
