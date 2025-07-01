@@ -10,6 +10,8 @@
 
 - [llm_chat - LLM Chat](llm_chat/)
   - Manage chats with LLM
+- [path_utils - Path Utilities](path_utils/)
+  - Utility functions for file paths
 - [env_settings - Environment Variable Settings](env_settings/)
   - Collection of environment-variable settings classes using `pydantic-settings`
 
