@@ -59,16 +59,11 @@ def exe_internal_root() -> Optional[str]:
     Returns:
         Optional[str]: 絶対パス
     """
-    if not getattr(sys, "frozen", False):
-        # ビルドされていない場合
-        return None
-
-    if hasattr(sys, "_MEIPASS"):
-        # PyInstaller の "--onefile" でビルドされている場合
+    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
         return str(sys._MEIPASS)
 
-    # PyInstaller の "--onedir" でビルドされている場合
-    return _resolve_project_root_from_module_depth()
+    # ビルドされていない場合
+    return None
 
 
 @lru_cache(maxsize=1)
