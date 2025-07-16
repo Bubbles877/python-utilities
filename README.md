@@ -17,4 +17,4 @@
 
 ## 3. Repository
 
-- [Bubbles877/python-utilities](https://github.com/Bubbles877/python-utilities)
+- [Bubbles877/python-utilities: Python Utilities / Python ユーティリティ](https://github.com/Bubbles877/python-utilities)
