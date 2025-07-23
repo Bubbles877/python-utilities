@@ -60,3 +60,7 @@ print(response)  # e.g. The capital of Japan is Tokyo.
 ## 6. Repository
 
 - [Bubbles877/python-utilities](https://github.com/Bubbles877/python-utilities)
+
+## 7. References
+
+- [🛡 Build a Secure Local-Only AI Chat App with Ollama and Gradio!](https://zenn.dev/bubbles/articles/29e546ae7ee16d)

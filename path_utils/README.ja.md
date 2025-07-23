@@ -37,3 +37,7 @@ setting_file_path = path_utils.runtime_path("data/setting.txt")
 ## 6. リポジトリ
 
 - [Bubbles877/python-utilities](https://github.com/Bubbles877/python-utilities)
+
+## 7. 関連・参考
+
+- [🐍 ファイルが見つからない！ Python のファイルパス管理戦略](https://zenn.dev/bubbles/articles/5da790e0d2883d)
